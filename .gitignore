@@ -1,0 +1,35 @@
+# Environment secrets
+.env
+
+# ChromaDB persistent storage
+chroma_db/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build/automation scripts (not part of the project)
+build_real_history.py
+generate_commits.ps1
+recover_files.py
+
