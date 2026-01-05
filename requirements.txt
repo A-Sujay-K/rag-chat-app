@@ -1,2 +1,5 @@
 # Core Framework
 llama-index-core
+
+llama-index-readers-file
+python-dotenv
