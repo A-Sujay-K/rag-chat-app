@@ -1,0 +1,8 @@
+# ── Core Framework ──
+llama-index-core
+
+# ── LLM Integrations ──
+llama-index-llms-openai
+llama-index-llms-ollama
+
+# ── Embedding Integrations ──
