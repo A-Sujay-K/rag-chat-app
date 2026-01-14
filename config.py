@@ -22,3 +22,9 @@ OPENAI_MODEL: str = os.getenv("OPENAI_MODEL", "gpt-4o")
 OPENAI_EMBEDDING_MODEL: str = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
 
 # ── Ollama ────────────────────────────────────────────────────────
+OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "llama3.1")
+
+# ── HuggingFace Embeddings ───────────────────────────────────────
+HF_EMBEDDING_MODEL: str = os.getenv(
+    "HF_EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2"
