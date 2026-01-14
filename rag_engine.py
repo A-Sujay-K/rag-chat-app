@@ -11,3 +11,7 @@ from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 
 
 SUPPORTED_EXTENSIONS = ['.pdf', '.txt', '.md', '.docx']
+
+
+def configure_settings():
+    pass
