@@ -18,3 +18,13 @@ from config import (
     OLLAMA_BASE_URL,
     OLLAMA_MODEL,
     HF_EMBEDDING_MODEL,
+    CHUNK_SIZE,
+    CHUNK_OVERLAP,
+    DATA_DIR,
+    CHROMA_DB_DIR,
+    CHROMA_COLLECTION,
+)
+
+from llama_index.core import (
+    VectorStoreIndex,
+    SimpleDirectoryReader,
