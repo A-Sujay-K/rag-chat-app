@@ -28,3 +28,13 @@ from config import (
 from llama_index.core import (
     VectorStoreIndex,
     SimpleDirectoryReader,
+    StorageContext,
+    Settings,
+)
+from llama_index.vector_stores.chroma import ChromaVectorStore
+
+
+# ── Supported file extensions ─────────────────────────────────────
+SUPPORTED_EXTENSIONS = [
+    # Documents
+    ".pdf", ".txt", ".md", ".docx", ".rtf", ".csv",
