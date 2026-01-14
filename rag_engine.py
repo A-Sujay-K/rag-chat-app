@@ -8,3 +8,13 @@ providers via config.py.
 
 import os
 import chromadb
+
+from config import (
+    LLM_PROVIDER,
+    EMBEDDING_PROVIDER,
+    OPENAI_API_KEY,
+    OPENAI_MODEL,
+    OPENAI_EMBEDDING_MODEL,
+    OLLAMA_BASE_URL,
+    OLLAMA_MODEL,
+    HF_EMBEDDING_MODEL,
