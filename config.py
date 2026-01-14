@@ -28,3 +28,8 @@ OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "llama3.1")
 # ── HuggingFace Embeddings ───────────────────────────────────────
 HF_EMBEDDING_MODEL: str = os.getenv(
     "HF_EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2"
+)
+
+# ── Chunking ─────────────────────────────────────────────────────
+CHUNK_SIZE: int = int(os.getenv("CHUNK_SIZE", "512"))
+CHUNK_OVERLAP: int = int(os.getenv("CHUNK_OVERLAP", "50"))
