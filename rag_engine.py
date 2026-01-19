@@ -38,3 +38,13 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 SUPPORTED_EXTENSIONS = [
     # Documents
     ".pdf", ".txt", ".md", ".docx", ".rtf", ".csv",
+    # Code
+    ".py", ".js", ".ts", ".jsx", ".tsx",
+    ".java", ".cpp", ".c", ".h", ".hpp",
+    ".go", ".rs", ".rb", ".php", ".swift",
+    ".kt", ".scala", ".r", ".sql",
+    ".html", ".css", ".scss", ".xml", ".json", ".yaml", ".yml",
+    ".toml", ".ini", ".cfg", ".sh", ".bat", ".ps1",
+]
+
+
