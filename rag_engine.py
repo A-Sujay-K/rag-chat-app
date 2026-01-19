@@ -48,3 +48,13 @@ SUPPORTED_EXTENSIONS = [
 ]
 
 
+def get_llm():
+    """Return the configured LLM instance."""
+    if LLM_PROVIDER == "openai":
+        from llama_index.llms.openai import OpenAI
+
+        if not OPENAI_API_KEY:
+            raise ValueError(
+                "OPENAI_API_KEY is required when LLM_PROVIDER=openai. "
+                "Set it in your .env file."
+            )
