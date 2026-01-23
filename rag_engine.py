@@ -68,3 +68,13 @@ def get_llm():
 
         return Ollama(
             model=OLLAMA_MODEL,
+            base_url=OLLAMA_BASE_URL,
+            request_timeout=120.0,
+        )
+
+
+def get_embed_model():
+    """Return the configured embedding model instance."""
+    if EMBEDDING_PROVIDER == "openai":
+        from llama_index.embeddings.openai import OpenAIEmbedding
+
