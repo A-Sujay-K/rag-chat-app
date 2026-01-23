@@ -58,3 +58,13 @@ def get_llm():
                 "OPENAI_API_KEY is required when LLM_PROVIDER=openai. "
                 "Set it in your .env file."
             )
+        return OpenAI(
+            model=OPENAI_MODEL,
+            api_key=OPENAI_API_KEY,
+            temperature=0.1,
+        )
+    else:
+        from llama_index.llms.ollama import Ollama
+
+        return Ollama(
+            model=OLLAMA_MODEL,
