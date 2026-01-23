@@ -78,3 +78,13 @@ def get_embed_model():
     if EMBEDDING_PROVIDER == "openai":
         from llama_index.embeddings.openai import OpenAIEmbedding
 
+        if not OPENAI_API_KEY:
+            raise ValueError(
+                "OPENAI_API_KEY is required when EMBEDDING_PROVIDER=openai. "
+                "Set it in your .env file."
+            )
+        return OpenAIEmbedding(
+            model=OPENAI_EMBEDDING_MODEL,
+            api_key=OPENAI_API_KEY,
+        )
+    else:
