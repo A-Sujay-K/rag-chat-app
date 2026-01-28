@@ -25,3 +25,9 @@ def main():
     print("=" * 60)
     print()
 
+    start = time.time()
+
+    try:
+        index = ingest_documents()
+    except FileNotFoundError as e:
+        print(f"\n❌ {e}")
