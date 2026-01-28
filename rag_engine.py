@@ -88,3 +88,13 @@ def get_embed_model():
             api_key=OPENAI_API_KEY,
         )
     else:
+        from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+
+        return HuggingFaceEmbedding(model_name=HF_EMBEDDING_MODEL)
+
+
+def configure_settings():
+    """Apply the LLM and embedding model to the global LlamaIndex Settings."""
+    Settings.llm = get_llm()
+    Settings.embed_model = get_embed_model()
+    Settings.chunk_size = CHUNK_SIZE
