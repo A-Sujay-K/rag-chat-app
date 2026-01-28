@@ -98,3 +98,13 @@ def configure_settings():
     Settings.llm = get_llm()
     Settings.embed_model = get_embed_model()
     Settings.chunk_size = CHUNK_SIZE
+    Settings.chunk_overlap = CHUNK_OVERLAP
+
+
+def _get_chroma_vector_store() -> ChromaVectorStore:
+    """Create or connect to the persistent ChromaDB vector store."""
+    chroma_client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
+    chroma_collection = chroma_client.get_or_create_collection(CHROMA_COLLECTION)
+    return ChromaVectorStore(chroma_collection=chroma_collection)
+
+
