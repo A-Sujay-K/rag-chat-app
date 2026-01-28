@@ -128,3 +128,13 @@ def ingest_documents() -> VectorStoreIndex:
         f
         for _, _, files in os.walk(DATA_DIR)
         for f in files
+        if any(f.endswith(ext) for ext in SUPPORTED_EXTENSIONS)
+    )
+    if not has_files:
+        raise FileNotFoundError(
+            f"No supported files found in '{DATA_DIR}/'. "
+            f"Add PDFs, text files, code, or Word documents and try again."
+        )
+
+    print(f"📂 Scanning '{DATA_DIR}' for documents...")
+
