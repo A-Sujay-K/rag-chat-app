@@ -108,3 +108,13 @@ def _get_chroma_vector_store() -> ChromaVectorStore:
     return ChromaVectorStore(chroma_collection=chroma_collection)
 
 
+def ingest_documents() -> VectorStoreIndex:
+    """
+    Read all supported files from DATA_DIR, chunk them, embed them,
+    and store the resulting vectors in ChromaDB.
+
+    Returns the built VectorStoreIndex.
+    """
+    configure_settings()
+
+    if not os.path.isdir(DATA_DIR):
