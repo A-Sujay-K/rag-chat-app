@@ -19,3 +19,9 @@ def main():
     print("=" * 60)
     print("  📚 RAG Document Ingestion Pipeline")
     print("=" * 60)
+    print(f"  Data folder  : {DATA_DIR}")
+    print(f"  LLM provider : {LLM_PROVIDER}")
+    print(f"  Embed provider: {EMBEDDING_PROVIDER}")
+    print("=" * 60)
+    print()
+
