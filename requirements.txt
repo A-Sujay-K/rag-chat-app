@@ -6,3 +6,5 @@ python-dotenv
 
 llama-index-vector-stores-chroma
 chromadb
+
+chainlit
