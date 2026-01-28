@@ -118,3 +118,13 @@ def ingest_documents() -> VectorStoreIndex:
     configure_settings()
 
     if not os.path.isdir(DATA_DIR):
+        os.makedirs(DATA_DIR, exist_ok=True)
+        raise FileNotFoundError(
+            f"No documents found. Please add files to the '{DATA_DIR}/' folder."
+        )
+
+    # Check that there are actual files in the directory
+    has_files = any(
+        f
+        for _, _, files in os.walk(DATA_DIR)
+        for f in files
