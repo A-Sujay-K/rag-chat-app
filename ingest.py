@@ -12,3 +12,10 @@ Run this once after adding or updating documents in the data/ folder.
 import sys
 import time
 from rag_engine import ingest_documents
+from config import DATA_DIR, LLM_PROVIDER, EMBEDDING_PROVIDER
+
+
+def main():
+    print("=" * 60)
+    print("  📚 RAG Document Ingestion Pipeline")
+    print("=" * 60)
