@@ -31,3 +31,9 @@ def main():
         index = ingest_documents()
     except FileNotFoundError as e:
         print(f"\n❌ {e}")
+        sys.exit(1)
+    except Exception as e:
+        print(f"\n❌ Error during ingestion: {e}")
+        raise
+
+    elapsed = time.time() - start
