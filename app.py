@@ -72,3 +72,11 @@ async def on_message(message: cl.Message):
         await cl.Message(
             content=(
                 "⚠️ Chat engine not initialized. "
+                "Please refresh the page or check the setup instructions."
+            )
+        ).send()
+        return
+
+    # Create an empty message to stream into
+    msg = cl.Message(content="")
+    await msg.send()
