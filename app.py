@@ -32,3 +32,11 @@ async def on_chat_start():
                 f"❌ **Failed to load the knowledge base.**\n\n"
                 f"```\n{e}\n```\n\n"
                 f"Make sure you have run `python ingest.py` first and that "
+                f"your provider ({LLM_PROVIDER}/{EMBEDDING_PROVIDER}) is configured correctly."
+            )
+        ).send()
+        return
+
+    # Create a chat engine with context mode for conversational RAG
+    chat_engine = index.as_chat_engine(
+        chat_mode="context",
