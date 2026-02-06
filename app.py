@@ -80,3 +80,11 @@ async def on_message(message: cl.Message):
     # Create an empty message to stream into
     msg = cl.Message(content="")
     await msg.send()
+
+    try:
+        # Stream the LLM response token by token
+        streaming_response = await chat_engine.astream_chat(message.content)
+
+        full_response = ""
+        async for token in streaming_response.async_response_gen():
+            full_response += token
