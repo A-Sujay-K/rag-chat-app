@@ -48,3 +48,11 @@ async def on_chat_start():
             "If the answer is not in the context, say: "
             "'I don't have enough information in the provided documents to answer that question.' "
             "Always cite which document the information came from when possible. "
+            "Be concise but thorough."
+        ),
+    )
+
+    # Persist per-session so each user gets their own chat history
+    cl.user_session.set("chat_engine", chat_engine)
+
+    await cl.Message(
