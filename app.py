@@ -88,3 +88,11 @@ async def on_message(message: cl.Message):
         full_response = ""
         async for token in streaming_response.async_response_gen():
             full_response += token
+            await msg.stream_token(token)
+
+        # ── Source Attribution ────────────────────────────────────
+        source_nodes = streaming_response.source_nodes
+        if source_nodes:
+            text_elements = []
+            source_names = []
+
