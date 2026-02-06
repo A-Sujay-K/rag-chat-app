@@ -40,3 +40,11 @@ async def on_chat_start():
     # Create a chat engine with context mode for conversational RAG
     chat_engine = index.as_chat_engine(
         chat_mode="context",
+        streaming=True,
+        similarity_top_k=3,
+        system_prompt=(
+            "You are a helpful, accurate, and friendly assistant. "
+            "Answer the user's questions based ONLY on the provided context from their documents. "
+            "If the answer is not in the context, say: "
+            "'I don't have enough information in the provided documents to answer that question.' "
+            "Always cite which document the information came from when possible. "
