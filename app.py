@@ -24,3 +24,11 @@ async def on_chat_start():
     ).send()
 
     try:
+        configure_settings()
+        index = load_index()
+    except Exception as e:
+        await cl.Message(
+            content=(
+                f"❌ **Failed to load the knowledge base.**\n\n"
+                f"```\n{e}\n```\n\n"
+                f"Make sure you have run `python ingest.py` first and that "
