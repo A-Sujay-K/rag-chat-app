@@ -56,3 +56,11 @@ async def on_chat_start():
     cl.user_session.set("chat_engine", chat_engine)
 
     await cl.Message(
+        content=(
+            f"✅ **Ready!** Ask me anything about your documents.\n\n"
+            f"*Running on `{LLM_PROVIDER}` LLM with `{EMBEDDING_PROVIDER}` embeddings.*"
+        )
+    ).send()
+
+
+@cl.on_message
