@@ -64,3 +64,11 @@ async def on_chat_start():
 
 
 @cl.on_message
+async def on_message(message: cl.Message):
+    """Handle each user message: stream response + show sources."""
+    chat_engine = cl.user_session.get("chat_engine")
+
+    if chat_engine is None:
+        await cl.Message(
+            content=(
+                "⚠️ Chat engine not initialized. "
