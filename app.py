@@ -104,3 +104,11 @@ async def on_message(message: cl.Message):
 
                 if page_label:
                     source_name = f"📄 {file_name} (p. {page_label})"
+                else:
+                    source_name = f"📄 {file_name}"
+
+                # Avoid duplicate names
+                if source_name in source_names:
+                    source_name = f"{source_name} [{i + 1}]"
+
+                text_elements.append(
