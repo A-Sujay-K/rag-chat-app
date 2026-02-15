@@ -96,3 +96,11 @@ async def on_message(message: cl.Message):
             text_elements = []
             source_names = []
 
+            for i, node in enumerate(source_nodes):
+                # Try to extract a meaningful source name
+                metadata = node.node.metadata or {}
+                file_name = metadata.get("file_name", f"Chunk {i + 1}")
+                page_label = metadata.get("page_label", "")
+
+                if page_label:
+                    source_name = f"📄 {file_name} (p. {page_label})"
