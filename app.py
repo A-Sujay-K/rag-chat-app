@@ -112,3 +112,11 @@ async def on_message(message: cl.Message):
                     source_name = f"{source_name} [{i + 1}]"
 
                 text_elements.append(
+                    cl.Text(
+                        content=node.node.get_content(),
+                        name=source_name,
+                        display="side",
+                    )
+                )
+                source_names.append(source_name)
+
