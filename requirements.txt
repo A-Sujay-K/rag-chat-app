@@ -1,10 +1,24 @@
-# Core Framework
+# ── Core Framework ──
 llama-index-core
 
-llama-index-readers-file
-python-dotenv
+# ── LLM Integrations ──
+llama-index-llms-openai
+llama-index-llms-ollama
 
+# ── Embedding Integrations ──
+llama-index-embeddings-openai
+llama-index-embeddings-huggingface
+
+# ── Vector Store ──
 llama-index-vector-stores-chroma
 chromadb
 
+# ── File Readers ──
+llama-index-readers-file
+
+# ── Chat UI ──
 chainlit
+
+# ── Utilities ──
+python-dotenv
+sentence-transformers
