@@ -5,3 +5,10 @@ Artificial Intelligence (AI) refers to the simulation of human intelligence in m
 1. Machine Learning (ML)
 Machine learning is a subset of AI that involves the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence.
 
+2. Natural Language Processing (NLP)
+NLP is the ability of a computer program to understand human language as it is spoken. NLP is a component of artificial intelligence.
+
+3. Computer Vision
+Computer vision is an interdisciplinary scientific field that deals with how computers can gain high-level understanding from digital images or videos.
+
+The development of AI has brought about many new technologies, including self-driving cars, smart assistants like Siri and Alexa, and recommendation systems used by Netflix and Amazon.
