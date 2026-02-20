@@ -1,0 +1,7 @@
+Artificial Intelligence Overview
+
+Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions. The term may also be applied to any machine that exhibits traits associated with a human mind such as learning and problem-solving.
+
+1. Machine Learning (ML)
+Machine learning is a subset of AI that involves the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence.
+
