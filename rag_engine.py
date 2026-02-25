@@ -158,3 +158,13 @@ def ingest_documents() -> VectorStoreIndex:
     storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
     print("🔢 Embedding and indexing documents...")
+    index = VectorStoreIndex.from_documents(
+        documents,
+        storage_context=storage_context,
+        show_progress=True,
+    )
+
+    print("✅ Ingestion complete! Vector store saved to disk.")
+    return index
+
+
