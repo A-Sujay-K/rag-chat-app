@@ -138,3 +138,13 @@ def ingest_documents() -> VectorStoreIndex:
 
     print(f"📂 Scanning '{DATA_DIR}' for documents...")
 
+    reader = SimpleDirectoryReader(
+        input_dir=DATA_DIR,
+        recursive=True,
+        required_exts=SUPPORTED_EXTENSIONS,
+    )
+    documents = reader.load_data()
+    print(f"📄 Loaded {len(documents)} document chunks from {DATA_DIR}")
+
+    # Clear existing collection to avoid duplicates on re-ingestion
+    chroma_client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
