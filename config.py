@@ -33,3 +33,8 @@ HF_EMBEDDING_MODEL: str = os.getenv(
 # ── Chunking ─────────────────────────────────────────────────────
 CHUNK_SIZE: int = int(os.getenv("CHUNK_SIZE", "512"))
 CHUNK_OVERLAP: int = int(os.getenv("CHUNK_OVERLAP", "50"))
+
+# ── Paths ────────────────────────────────────────────────────────
+DATA_DIR: str = os.getenv("DATA_DIR", "./data")
+CHROMA_DB_DIR: str = os.getenv("CHROMA_DB_DIR", "./chroma_db")
+CHROMA_COLLECTION: str = os.getenv("CHROMA_COLLECTION", "rag_documents")
