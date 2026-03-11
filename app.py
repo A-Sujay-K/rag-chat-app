@@ -120,3 +120,11 @@ async def on_message(message: cl.Message):
                 )
                 source_names.append(source_name)
 
+            msg.elements = text_elements
+            msg.content += "\n\n---\n**Sources:** " + " · ".join(source_names)
+
+        await msg.update()
+
+    except Exception as e:
+        msg.content = f"❌ An error occurred:\n```\n{e}\n```"
+        await msg.update()
