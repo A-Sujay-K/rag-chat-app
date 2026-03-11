@@ -168,3 +168,12 @@ def ingest_documents() -> VectorStoreIndex:
     return index
 
 
+def load_index() -> VectorStoreIndex:
+    """
+    Load an existing index from ChromaDB without re-ingesting documents.
+
+    Call this at query time (e.g., when the Chainlit app starts).
+    """
+    configure_settings()
+    vector_store = _get_chroma_vector_store()
+    return VectorStoreIndex.from_vector_store(vector_store=vector_store)
