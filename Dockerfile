@@ -18,3 +18,8 @@ COPY . .
 # Create data directory if it doesn't exist
 RUN mkdir -p /app/data /app/chroma_db
 
+# Expose Chainlit's default port
+EXPOSE 8000
+
+# Run Chainlit
+CMD ["chainlit", "run", "app.py", "--host", "0.0.0.0", "--port", "8000"]
