@@ -37,3 +37,9 @@ def main():
         raise
 
     elapsed = time.time() - start
+    print(f"\n⏱️  Completed in {elapsed:.1f} seconds")
+    print(f"🚀 You can now run: chainlit run app.py -w")
+
+
+if __name__ == "__main__":
+    main()
