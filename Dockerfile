@@ -13,3 +13,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application
+COPY . .
+
+# Create data directory if it doesn't exist
+RUN mkdir -p /app/data /app/chroma_db
+
