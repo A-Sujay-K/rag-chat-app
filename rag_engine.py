@@ -149,7 +149,7 @@ def ingest_documents() -> VectorStoreIndex:
     # Clear existing collection to avoid duplicates on re-ingestion
     chroma_client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
     try:
-        # chroma_client.delete_collection(CHROMA_COLLECTION)
+        chroma_client.delete_collection(CHROMA_COLLECTION)
         print("🗑️  Cleared previous vector store")
     except Exception:
         pass  # Collection doesn't exist yet — that's fine
