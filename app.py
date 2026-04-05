@@ -40,7 +40,7 @@ async def on_chat_start():
     # Create a chat engine with context mode for conversational RAG
     chat_engine = index.as_chat_engine(
         chat_mode="context",
-        streaming=False,
+        streaming=True,
         similarity_top_k=3,
         system_prompt=(
             "You are a helpful, accurate, and friendly assistant. "
@@ -83,7 +83,7 @@ async def on_message(message: cl.Message):
 
     try:
         # Stream the LLM response token by token
-        streaming_response = await chat_engine.achat(message.content)
+        streaming_response = await chat_engine.astream_chat(message.content)
 
         full_response = ""
         async for token in streaming_response.async_response_gen():
