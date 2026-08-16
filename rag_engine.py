@@ -177,3 +177,5 @@ def load_index() -> VectorStoreIndex:
     configure_settings()
     vector_store = _get_chroma_vector_store()
     return VectorStoreIndex.from_vector_store(vector_store=vector_store)
+
+# Fixed: recreate ChromaDB collection on re-ingestion to avoid dimension mismatch
