@@ -195,3 +195,5 @@ All settings live in `.env`. Here's what each one does:
 ## 📝 License
 
 MIT — use it however you like.
+
+<!-- Reviewed and finalized for v1.0.0 release -->
