@@ -128,3 +128,5 @@ async def on_message(message: cl.Message):
     except Exception as e:
         msg.content = f"❌ An error occurred:\n```\n{e}\n```"
         await msg.update()
+
+# Streaming: tokens appear incrementally via response_gen iterator
